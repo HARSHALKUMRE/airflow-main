@@ -26,7 +26,8 @@ with DAG(
     first_function_execute = PythonOperator(
         task_id = 'first_fuction_execute',
         python_callable = first_fuction_execute,
-        op_kwargs = {"name":"Harshal"}
+        provide_context = True,
+        #op_kwargs = {"name":"Harshal"}
     )
     second_function_execute = PythonOperator(
         task_id = 'second_function_execute',
